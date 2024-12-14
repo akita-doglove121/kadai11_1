@@ -1,5 +1,4 @@
 package kadai_11;
-import java.util.*;
 import java.util.List;
 public class Story_11 {
     public static void main(String[] args) {
@@ -15,7 +14,7 @@ public class Story_11 {
         // 各キャラクターの状態を表示
         
         // モンスターの設定
-        Monster monster = new Monster("ドラゴン", 100, 8, 2, 4);
+        Monster monster = new Monster("ドラゴン", 10, 8, 2, 4);
         monster.startStatus();
         // Battleクラスにキャラクターとモンスターを設定
         Battle.setCharacters(List.of(c[0], c[1])); // heroとmagicianを指定

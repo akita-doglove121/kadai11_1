@@ -12,6 +12,9 @@ public abstract class Character implements TurnTaker{//抽象化クラスではa
 	}
 	public void setHp(int hp) {
 		this.hp = hp;
+		if (this.getHp() <0) {
+			this.hp = 0;
+		}
 	}
 	public String getName() {
 		return name;

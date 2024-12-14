@@ -1,11 +1,6 @@
 package kadai_11;
 
 public class Magician extends Character{
-	private int hp ;
-	private String name ;
-	private int atk ;
-	private int dfn ;
-	private int spd ;
 	private int mp = 30;
 	public Magician(String name, int hp, int atk, int dfn, int spd) {
         super(name, hp, atk, dfn, spd);  // 親クラスのコンストラクタを呼び出す
@@ -38,12 +33,14 @@ public class Magician extends Character{
 		monster.setHp(newMhp);
 		System.out.println(monster.getName() + "に" + damage + "のダメージを与えた！");
 		System.out.println("MPを3消費した。");
-		int newmp = getMp() - 3;
-		System.out.println("残りMPは" + this.getMp() + "だ！");
 		newatk -=3;
+		this.setMp(getMp() - 3);
+		System.out.println("残りMPは" + this.getMp() + "だ！");
 		monster.status();
 		
 	}
+	
+
 	public void deffesce() {
 		System.out.println("Magicianは防御した");
 		int newdfn = this.getDfn();

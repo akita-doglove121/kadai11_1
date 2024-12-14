@@ -29,6 +29,9 @@ public abstract class Creature implements TurnTaker {
 	}
 	public void setHp(int hp) {
 		this.hp = hp;
+		if (this.getHp() <0) {
+			this.hp = 0;
+		}
 	}
 	public String getName() {
 		return name;

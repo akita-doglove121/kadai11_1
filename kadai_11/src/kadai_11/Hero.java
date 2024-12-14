@@ -2,11 +2,6 @@ package kadai_11;
 
 
 public class Hero extends Character{//攻撃メソッドと防御メソッドのオーバライドが強制される（作らないとエラー）
-	private int hp = 25;
-	private String name;
-	private int atk ;
-	private int dfn ;
-	private int spd ;
 	public Hero(String name, int hp, int atk, int dfn, int spd) {
         super(name, hp, atk, dfn, spd);  // 親クラスのコンストラクタを呼び出す
     }
