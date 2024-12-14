@@ -1,7 +1,7 @@
 package kadai_11;
 
 
-public abstract class Hero extends Character{//攻撃メソッドと防御メソッドのオーバライドが強制される（作らないとエラー）
+public class Hero extends Character{//攻撃メソッドと防御メソッドのオーバライドが強制される（作らないとエラー）
 	private int hp = 25;
 	private String name;
 	private int atk ;
@@ -20,7 +20,6 @@ public abstract class Hero extends Character{//攻撃メソッドと防御メソ
 	}
 	
 	public void attack(Creature monster) {
-		System.out.println("Heroの攻撃");
 		int damage = this.getAtk() - monster.getDfn();
 		if ( damage < 0) {
 			damage = 0;
@@ -53,6 +52,12 @@ public abstract class Hero extends Character{//攻撃メソッドと防御メソ
         // ターゲットとしてモンスターを攻撃
         attack(Battle.getMonster());
     }
+
+	@Override
+	public int getSpeed() {
+		// TODO 自動生成されたメソッド・スタブ
+		return 0;
+	}
 	
 
 }

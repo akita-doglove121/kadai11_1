@@ -3,10 +3,18 @@ package kadai_11;
 import java.util.List;
 import java.util.Random;
 
-public abstract class Monster extends Creature {
+public class Monster extends Creature {
 	public Monster(String name, int hp, int atk, int dfn, int spd) {
         super(name, hp, atk, dfn, spd);  // 親クラスのコンストラクタを呼び出す
     }
+	
+	public void startStatus() {
+		System.out.println("魔物の" + this.getName() + "が誕生した！");
+	    System.out.println("体力は" + this.getHp() + "だ");
+	    System.out.println("攻撃力は" + this.getAtk() + "だ");
+	    System.out.println("防御力は" + this.getDfn() + "だ");
+	    System.out.println("素早さは" + this.getSpd() + "だ");
+	}
 	
 	public void attack(List<Character> characters) {
 	    System.out.println(this.getName() + "の攻撃！");
@@ -50,6 +58,18 @@ public abstract class Monster extends Creature {
         // ターゲットとしてモンスターを攻撃
         attack(Battle.getCharacter());
     }
+
+	@Override
+	public int getSpeed() {
+		// TODO 自動生成されたメソッド・スタブ
+		return 0;
+	}
+
+	@Override
+	public void turnTake() {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
 	
 
 }

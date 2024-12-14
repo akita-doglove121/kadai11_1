@@ -1,6 +1,6 @@
 package kadai_11;
 
-public abstract class Magician extends Character{
+public class Magician extends Character{
 	private int hp ;
 	private String name ;
 	private int atk ;
@@ -19,7 +19,7 @@ public abstract class Magician extends Character{
 	}
 	
 	public void startStatus() {
-		System.out.println("勇者" + this.getName() + "が誕生した！");
+		System.out.println("魔法使い" + this.getName() + "が誕生した！");
 	    System.out.println("体力は" + this.getHp() + "だ");
 	    System.out.println("攻撃力は" + this.getAtk() + "だ");
 	    System.out.println("防御力は" + this.getDfn() + "だ");
@@ -66,5 +66,17 @@ public abstract class Magician extends Character{
         attack(Battle.getMonster());
        
     }
+
+	@Override
+	public int getSpeed() {
+		// TODO 自動生成されたメソッド・スタブ
+		return 0;
+	}
+
+	@Override
+	public void deffense() {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
 
 }

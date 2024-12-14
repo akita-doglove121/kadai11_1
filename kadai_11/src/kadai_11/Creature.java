@@ -11,8 +11,18 @@ public abstract class Creature implements TurnTaker {
 	private int spd;
 	
 	public Creature(String name, int hp, int atk, int dfn, int spd) {
-        
+		this.name = name;
+	    this.hp = hp;
+	    this.atk = atk;
+	    this.dfn = dfn;
+	    this.spd = spd;
     }
+	public void startStatus() {
+		System.out.println("名前" + this.getName() + "が誕生した！");
+	    System.out.println("体力は" + this.getHp() + "だ");
+	    System.out.println("攻撃力は" + this.getAtk() + "だ");
+	    System.out.println("防御力は" + this.getDfn() + "だ");
+	}
 	
 	public int getHp() {
 		return hp;
@@ -32,6 +42,8 @@ public abstract class Creature implements TurnTaker {
 	public void setSpd(int spd) {
 		this.spd = spd;
 	}
+	
+
 	
 	public abstract void attack(List<Character> characters); //抽象化　public abstract 戻り値　メソッド（）；
 	public int getAtk() {
