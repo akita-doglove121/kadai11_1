@@ -3,7 +3,7 @@ package kadai_11;
 import java.util.Random;
 
 public class Monster extends Creature {
-    public void attack(Charactor hero,Charactor magician) {
+    public void attack(Charactors[0],Charactors[1]) {
 		System.out.println(this.getName() + "の攻撃！");
 		
 		Random rdm = new Random();

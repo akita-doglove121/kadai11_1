@@ -1,6 +1,20 @@
 package kadai_11;
 
 public class Hero extends Charactor{//攻撃メソッドと防御メソッドのオーバライドが強制される（作らないとエラー）
+	private int hp = 25;
+	private String name = "勇者";
+	private int atk = 7;
+	private int dfn = 3;
+	private int spd = 5;
+	
+	public void startStatus() {
+		System.out.println("勇者" + this.getName() + "が誕生した！");
+	    System.out.println("体力は" + this.getHp() + "だ");
+	    System.out.println("攻撃力は" + this.getAtk() + "だ");
+	    System.out.println("防御力は" + this.getDfn() + "だ");
+	    System.out.println("素早さは" + this.getSpd() + "だ");
+	}
+	
 	public void attack(Creature monster) {
 		System.out.println("Heroの攻撃");
 		int damage = this.getAtk() - monster.getDfn();
